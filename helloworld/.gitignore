@@ -1,12 +1,1 @@
 /target/
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# Eclipse editor specific files 
-.settings
-.project
-.classpath
