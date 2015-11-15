@@ -3,7 +3,6 @@
 # Eclipse Core
 .project
 .settings/
-.classpath
 
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
