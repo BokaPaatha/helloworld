@@ -22,6 +22,9 @@ public class RosterTest {
 
 	@Before
 	public void initialize() {
+
+		// Initialize a list.
+
 		roster = new ArrayList<Person>();
 		roster.add(new Person("Fred", IsoChronology.INSTANCE.date(1980, 6, 20),
 				Person.Sex.MALE, "fred@example.com"));
@@ -37,12 +40,24 @@ public class RosterTest {
 	@Test
 	public void test() {
 
+		// Let's check if the list is in place.
 		for (Person p : roster) {
 			logger.debug("Person.toString is {}", p.toString());
-
 		}
 
+		// Search 1 : Create a method
+		printPersonsOlderThan(roster, 20);
+
 		assertTrue(false);
+	}
+
+	public static void printPersonsOlderThan(List<Person> roster, int age) {
+		for (Person p : roster) {
+			if (p.getAge() >= age) {
+
+				logger.debug("Person older than {} is {}.", age, p.toString());
+			}
+		}
 	}
 
 }

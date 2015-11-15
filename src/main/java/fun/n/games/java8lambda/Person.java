@@ -1,6 +1,7 @@
 package fun.n.games.java8lambda;
 
 import java.time.LocalDate;
+import java.time.chrono.IsoChronology;
 
 import lombok.Data;
 
@@ -25,14 +26,7 @@ public class Person {
 	}
 
 	public int getAge() {
-		// TODO: Add some logic.
-		return 0;
-
-	}
-
-	public void printPerson() {
-		System.out.println();
-		// TODO: Add some logic.
+		return birthday.until(IsoChronology.INSTANCE.dateNow()).getYears();
 	}
 
 }
